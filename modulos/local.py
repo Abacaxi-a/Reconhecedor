@@ -6,6 +6,9 @@ import pandas as pd
 import time
 
 class localizar:
+    def __init__(self, image_path):
+        self.arquivo = image_path
+
     def find(self):
         self.img = cv2.imread(self.arquivo)
         self.r = DeepFace.find(img_path=self.img,db_path=self.procurar,enforce_detection=False)
